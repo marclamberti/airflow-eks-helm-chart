@@ -30,6 +30,7 @@ data:
   REDIS_PORT: "6379"
   REDIS_DBNUM: "1"
   {{- end }}
+  
   {{- if and (eq .Values.redis.enabled false) (eq .Values.externalRedis.enabled true) }}
   REDIS_HOST: "{{ .Values.externalRedis.host }}"
   REDIS_PORT: "{{ .Values.externalRedis.port }}"
