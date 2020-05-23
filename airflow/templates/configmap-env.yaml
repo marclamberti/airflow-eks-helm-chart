@@ -30,12 +30,10 @@ data:
   REDIS_PORT: "6379"
   REDIS_DBNUM: "1"
   {{- end }}
-  {{- if .Values.externalRedis.enabled }}
-  {{- if not .Values.redis.enabled }}
+  {{- if and (eq .Values.redis.enabled false) (eq .Values.externalRedis.enabled true) }}
   REDIS_HOST: "{{ .Values.externalRedis.host }}"
   REDIS_PORT: "{{ .Values.externalRedis.port }}"
   REDIS_DBNUM: "{{ .Values.externalRedis.databaseNumber }}"
-  {{- end }}
   {{- end }}
 
   ## Airflow (Flower)

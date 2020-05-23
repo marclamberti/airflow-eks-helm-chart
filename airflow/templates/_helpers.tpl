@@ -144,14 +144,12 @@ When applicable, we use the secrets created by the postgres/redis charts (which 
       key: redis-password
 {{- end }}
 {{- end }}
-{{- if .Values.externalRedis.enabled }}
-{{- if not .Values.redis.enabled }}
+{{- if and (eq .Values.redis.enabled false) (eq .Values.externalRedis.enabled true) }}
 - name: REDIS_PASSWORD
   valueFrom:
     secretKeyRef:
       name: {{ .Values.externalRedis.passwordSecret }}
       key: {{ .Values.externalRedis.passwordSecretKey }}
-{{- end }}
 {{- end }}
 {{- if .Values.airflow.extraEnv }}
 {{ toYaml .Values.airflow.extraEnv }}
