@@ -143,7 +143,8 @@ When applicable, we use the secrets created by the postgres/redis charts (which 
       name: {{ include "airflow.redis.fullname" . }}
       key: redis-password
 {{- end }}
-{{- else }}
+{{- end }}
+{{- if .Values.externalRedis.enabled and (not .Values.redis.enabled) }}
 - name: REDIS_PASSWORD
   valueFrom:
     secretKeyRef:

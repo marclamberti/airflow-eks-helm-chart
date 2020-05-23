@@ -29,7 +29,8 @@ data:
   REDIS_HOST: "{{ include "airflow.redis.fullname" . }}-master"
   REDIS_PORT: "6379"
   REDIS_DBNUM: "1"
-  {{- else }}
+  {{- end }}
+  {{- if .Values.externalRedis.enabled and (not .Values.redis.enabled) }}
   REDIS_HOST: "{{ .Values.externalRedis.host }}"
   REDIS_PORT: "{{ .Values.externalRedis.port }}"
   REDIS_DBNUM: "{{ .Values.externalRedis.databaseNumber }}"

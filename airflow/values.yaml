@@ -397,7 +397,7 @@ web:
 workers:
   ## if the airflow workers StatefulSet should be deployed
   ##
-  enabled: true
+  enabled: false
 
   ## resource requests/limits for the airflow worker Pods
   ##
@@ -502,7 +502,7 @@ workers:
 flower:
   ## if the Flower UI should be deployed
   ##
-  enabled: true
+  enabled: false
 
   ## resource requests/limits for the flower Pods
   ##
@@ -1098,7 +1098,7 @@ redis:
   ## NOTE:
   ## - set to false if using an external redis database
   ##
-  enabled: true
+  enabled: false
 
   ## the redis password
   ##
@@ -1197,6 +1197,10 @@ redis:
 # - these configs are only used when `redis.enabled` is false
 ###################################
 externalRedis:
+  ## if no redis at all
+  ##
+  enabled: false
+
   ## the host of the external redis
   ##
   host: localhost
