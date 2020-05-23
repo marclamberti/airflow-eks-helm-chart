@@ -144,7 +144,7 @@ When applicable, we use the secrets created by the postgres/redis charts (which 
       key: redis-password
 {{- end }}
 {{- end }}
-{{- if .Values.externalRedis.enabled and (not .Values.redis.enabled) }}
+{{{- if and ( .Values.externalRedis.enabled ) ( not .Values.redis.enabled ) }}
 - name: REDIS_PASSWORD
   valueFrom:
     secretKeyRef:
