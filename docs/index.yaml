@@ -3,7 +3,7 @@ entries:
   airflow:
   - apiVersion: v1
     appVersion: 1.10.10
-    created: "2020-05-23T19:33:29.717157529Z"
+    created: "2020-05-23T20:32:47.053950236Z"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -15,7 +15,7 @@ entries:
       version: 10.3.4
     description: Airflow is a platform to programmatically author, schedule and monitor
       workflows
-    digest: aafa64d6c880e0ef78ac660a7bfd5cbd6af0d9cb5d83dfe1707cefc3774b1fa0
+    digest: 5f778d29710a8431004bf733b9b30c78b0d3d2744384d67be9ebac135939a2d8
     home: https://airflow.apache.org/
     icon: https://airflow.apache.org/_images/pin_large.png
     keywords:
@@ -28,6 +28,6 @@ entries:
     sources:
     - https://airflow.apache.org/
     urls:
-    - https://marclamberti.github.io/airflow-eks-helm-chart/airflow-7.0.1.tgz
-    version: 7.0.1
-generated: "2020-05-23T19:33:29.706065177Z"
+    - https://marclamberti.github.io/airflow-eks-helm-chart/airflow-7.0.2.tgz
+    version: 7.0.2
+generated: "2020-05-23T20:32:47.040805651Z"
