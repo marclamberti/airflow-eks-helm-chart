@@ -3,7 +3,7 @@ entries:
   airflow:
   - apiVersion: v1
     appVersion: 1.10.10
-    created: "2020-05-23T20:32:47.053950236Z"
+    created: "2020-05-25T21:57:47.192221112Z"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -12,10 +12,10 @@ entries:
     - condition: redis.enabled
       name: redis
       repository: https://kubernetes-charts.storage.googleapis.com/
-      version: 10.3.4
+      version: 10.5.7
     description: Airflow is a platform to programmatically author, schedule and monitor
       workflows
-    digest: 5f778d29710a8431004bf733b9b30c78b0d3d2744384d67be9ebac135939a2d8
+    digest: 03e339a387bf4167ac58d520886ba5b8f813ab0c04f4e1035af2b4b8f666aa02
     home: https://airflow.apache.org/
     icon: https://airflow.apache.org/_images/pin_large.png
     keywords:
@@ -28,6 +28,6 @@ entries:
     sources:
     - https://airflow.apache.org/
     urls:
-    - https://marclamberti.github.io/airflow-eks-helm-chart/airflow-7.0.2.tgz
-    version: 7.0.2
-generated: "2020-05-23T20:32:47.040805651Z"
+    - https://marclamberti.github.io/airflow-eks-helm-chart/airflow-7.1.0.tgz
+    version: 7.1.0
+generated: "2020-05-25T21:57:47.1792614Z"
