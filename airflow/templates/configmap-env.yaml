@@ -58,6 +58,7 @@ data:
   AIRFLOW__KUBERNETES__GIT_REPO: "{{ .Values.dags.git.url }}"
   AIRFLOW__KUBERNETES__GIT_BRANCH: "{{ .Values.dags.git.ref }}"
   AIRFLOW__KUBERNETES__GIT_DAGS_FOLDER_MOUNT_POINT: "{{ .Values.dags.path }}"
+  AIRFLOW__KUBERNETES__GIT_SYNC_DEST: "" 
   {{- end }}
 
   ## Airflow (Logs)
