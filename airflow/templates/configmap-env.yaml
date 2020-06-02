@@ -54,13 +54,6 @@ data:
   {{- end }}
   {{- end }}
 
-  {{- if or (.Values.dags.initContainer.enabled) (.Values.dags.git.gitSync.enabled) }} 
-  AIRFLOW__KUBERNETES__GIT_REPO: "{{ .Values.dags.git.url }}"
-  AIRFLOW__KUBERNETES__GIT_BRANCH: "{{ .Values.dags.git.ref }}"
-  AIRFLOW__KUBERNETES__GIT_DAGS_FOLDER_MOUNT_POINT: "{{ .Values.dags.path }}"
-  AIRFLOW__KUBERNETES__GIT_SYNC_DEST: "" 
-  {{- end }}
-
   ## Airflow (Logs)
   AIRFLOW__CORE__BASE_LOG_FOLDER: "{{ .Values.logs.path }}"
   AIRFLOW__CORE__DAG_PROCESSOR_MANAGER_LOG_LOCATION: "{{ .Values.logs.path }}/dag_processor_manager/dag_processor_manager.log"
