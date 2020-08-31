@@ -42,6 +42,23 @@ tolerations: []
 # Add common labels to all objects and pods defined in this chart.
 labels: {}
 
+# Ingress configuration
+ingress:
+
+  # Enable ingress resource
+  enabled: true
+
+  # Config gor the Ingress
+  web:
+    # Annotations for the web Ingress
+    annotations: {}
+
+    # The path for the web Ingress
+    path: ""
+
+    # The hostname for the web Ingress
+    host: ""
+
 # Network policy configuration
 networkPolicies:
   # Enabled network policies
