@@ -46,7 +46,7 @@ labels: {}
 ingress:
 
   # Enable ingress resource
-  enabled: true
+  enabled: false
 
   # Config gor the Ingress
   web:

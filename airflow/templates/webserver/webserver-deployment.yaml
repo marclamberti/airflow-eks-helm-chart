@@ -122,10 +122,10 @@ spec:
           livenessProbe:
             httpGet:
 {{- if .Values.ingress.enabled }}
-              path: {{ printf "/%s/health" .Values.ingress.path }}
+              path: {{ printf "/%s/health" .Values.ingress.web.path }}
 {{- else }}
               path: /health
-{{- end}}
+{{- end }}
               port: {{ .Values.ports.airflowUI }}
             initialDelaySeconds: {{ .Values.webserver.livenessProbe.initialDelaySeconds | default 15 }}
             timeoutSeconds: {{ .Values.webserver.livenessProbe.timeoutSeconds | default 30 }}
@@ -134,10 +134,10 @@ spec:
           readinessProbe:
             httpGet:
 {{- if .Values.ingress.enabled }}
-              path: {{ printf "/%s/health" .Values.ingress.path }}
+              path: {{ printf "/%s/health" .Values.ingress.web.path }}
 {{- else }}
               path: /health
-{{- end}}
+{{- end }}
               port: {{ .Values.ports.airflowUI }}
             initialDelaySeconds: {{ .Values.webserver.readinessProbe.initialDelaySeconds | default 15 }}
             timeoutSeconds: {{ .Values.webserver.readinessProbe.timeoutSeconds | default 30 }}
