@@ -127,6 +127,7 @@ spec:
               path: /health
 {{- end }}
               port: {{ .Values.ports.airflowUI }}
+              scheme: {{ .Values.webserver.livenessProbe.scheme }}
             initialDelaySeconds: {{ .Values.webserver.livenessProbe.initialDelaySeconds | default 15 }}
             timeoutSeconds: {{ .Values.webserver.livenessProbe.timeoutSeconds | default 30 }}
             failureThreshold: {{ .Values.webserver.livenessProbe.failureThreshold | default 20 }}
@@ -139,6 +140,7 @@ spec:
               path: /health
 {{- end }}
               port: {{ .Values.ports.airflowUI }}
+              scheme: {{ .Values.webserver.readinessProbe.scheme }}
             initialDelaySeconds: {{ .Values.webserver.readinessProbe.initialDelaySeconds | default 15 }}
             timeoutSeconds: {{ .Values.webserver.readinessProbe.timeoutSeconds | default 30 }}
             failureThreshold: {{ .Values.webserver.readinessProbe.failureThreshold | default 20 }}
