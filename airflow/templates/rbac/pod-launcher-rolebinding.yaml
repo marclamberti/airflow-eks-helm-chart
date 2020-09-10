@@ -42,6 +42,9 @@ subjects:
   - kind: ServiceAccount
     name: {{ .Release.Name }}-scheduler-serviceaccount
     namespace: {{ .Release.Namespace }}
+  - kind: ServiceAccount
+    name: {{ .Release.Name }}-webserver-serviceaccount
+    namespace: {{ .Release.Namespace }}
 {{- end }}
 {{- if $grantWorker }}
   - kind: ServiceAccount
