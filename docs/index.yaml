@@ -2,14 +2,14 @@ apiVersion: v1
 entries:
   airflow:
   - apiVersion: v1
-    created: "2020-09-10T12:58:06.899349731Z"
+    created: "2020-09-10T14:16:33.311160066Z"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
       repository: '@stable'
       version: 6.3.12
     description: Helm chart to deploy Apache Airflow
-    digest: a716e25cfa5357d3bd54dae8b5e3bc5fd15f91cec14dd37ed7baccf86a335a7d
+    digest: e0fa5d8fefb8426818acdd501a7d866e452c25df7dec4ac30e93a378d59a89c4
     icon: https://www.astronomer.io/static/airflowNewA.png
     keywords:
     - airflow
@@ -17,4 +17,4 @@ entries:
     urls:
     - https://marclamberti.github.io/airflow-eks-helm-chart/airflow-1.0.0.tgz
     version: 1.0.0
-generated: "2020-09-10T12:58:06.893518573Z"
+generated: "2020-09-10T14:16:33.303424305Z"
